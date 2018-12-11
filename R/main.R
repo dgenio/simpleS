@@ -67,5 +67,11 @@ computeSelectionCoefficient <- function(dataMatrix, dilution, passages = NA, fre
 #' @return
 estimateInitialFrequency <- function(frequencies, passages, dilution){
   logRatio = log(frequencies/(1 - frequencies))
+  time = c(0)
+  for(pos in seq(2, length(frequencies))){
+    passageNumber = passages[pos] - passages[pos-1]
+    generationsPopulation = passageNumber * log2(dilution)
+
+  }
 
 }
